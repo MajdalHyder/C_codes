@@ -12,24 +12,24 @@ int main() {
 }
 /*--------------------------------------------------------*/
 
-int my_getnbr(char *str){           //function declared                      
-    int start_index = 0;            //start index of first integer encountered iterating over string charachters
-    int len=0;                      //length of the string passed to function
-    int result=0;                   //final return value with full int
-    int multiplier=1;               //to construct the result with multifigures starting from right 
-    int end_index=0;                //end index 
-    
-    while(str[i] != '\0'){          //calculate passed string length
+int my_getnbr(char *str){                                        //function declared                      
+    int start_index = 0;                                        //start index of first integer encountered iterating over string charachters
+    int len=0;                                                  //length of the string passed to function
+    int result=0;                                               //final return value with full int
+    int multiplier=1;                                           //to construct the result with multifigures starting from right 
+    int end_index=0;                                            //end index 
+    int i = 0;
+    while(str[i] != '\0'){                                      //calculate passed string length
         i++;
         len++;
     }
     
-    i = 0;                          //reset i
+    i = 0;                                                      //reset i
     
-    for(int i = 0; i<len; ++i){     //start iterating over string 
-        if (str[i] >= 48 && str[i] <= 57){  //first occurence of a digit charachter
-          start_index = i;                  // mark index
-          end_index = start_index;          //set end index counter
+    for(int i = 0; i<len; ++i){                                 //start iterating over string 
+        if (str[i] >= 48 && str[i] <= 57){                      //first occurence of a digit charachter
+          start_index = i;                                      // mark index
+          end_index = start_index;                              //set end index counter
           while(str[end_index] >= 48 && str[end_index] <= 57){  //as long as the following charachter is an int
              ++end_index;                                       //increment end index
           }
